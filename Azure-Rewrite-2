@@ -3468,6 +3468,16 @@ local StrechResSection = VisualsTab:CreateSector("Strech Res", "right")
 
 -- Target Aimbot Section Functions Start
 TargetSection:AddToggle("Enabled", false)
-TargetSection:AddToggle("Autolock", false)
+TargetSection:AddToggle("Auto Lock", false)
 TargetSection:AddKeybind("Keybind", false)
+TargetSection:AddTextbox("Prediction", "0", nil)
+local VelocityResolver = TargetSection:AddToggle("Velocity Resolver", false)
+VelocityResolver:AddKeybind()
+TargetSection:AddDropdown("Resolver Type", {"Recalculate", "MoveDirection"}, "Recalculate", false)
+TargetSection:AddSlider("Jump Offset", -1,0,1,100, function(State)
+end)
+TargetSection:AddToggle("Use Spam Guns", false)
+TargetSection:AddDropdown("Hit Part(s)", {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso", "RightUpperArm", "LeftUpperArm", "RightLowerArm", "LeftLowerArm", "RightUpperLeg", "LeftUpperLeg", "RightLowerLeg", "LeftLowerLeg"}, "HumanoidRootPart", false)
+TargetSection:AddToggle("Auto Pred", false)
+
 -- Target Aimbot Section Functions End
