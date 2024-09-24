@@ -3427,31 +3427,6 @@ function library:CreateWindow(name, size, hidebutton)
 end
 
 
-local Version = {
-    Value = "0.0.1"
-}
-
-local target_aim = {
-    Aiming = {
-        Target = {
-            Enabled = nil,
-            Key = nil,
-            Prediction = nil,
-            Radius = nil,
-            TargetPart = nil,
-            Alerts = nil,
-            JumpOffset = nil,
-            TargetStats = nil,
-            LookAt = nil
-        }
-    }
-}
-
-
-
-
-
-
 local NotifyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
 local Notify = NotifyLibrary.Notify
 local Window = library:CreateWindow("Azure Modded | Actyrn + Tactical | .gg/azuremodded", Vector2.new(500, 600), Enum.KeyCode.RightShift) 
@@ -3490,3 +3465,9 @@ local FaildOfViewSection = VisualsTab:CreateSector("Feild Of View", "right")
 local StrechResSection = VisualsTab:CreateSector("Strech Res", "right")
 -- Visuals Tab Section End
 -- Sections End
+
+-- Target Aimbot Section Functions Start
+TargetSection:AddToggle("Enabled", false)
+TargetSection:AddToggle("Autolock", false)
+TargetSection:AddKeybind("Keybind", false)
+-- Target Aimbot Section Functions End
